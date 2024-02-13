@@ -1,5 +1,6 @@
 from infra.configs.base import Base
 from sqlalchemy import Column, String, Integer
+from sqlalchemy.orm import relationship
 
 
 class Filmes(Base):
@@ -9,4 +10,4 @@ class Filmes(Base):
     ano = Column(Integer, nullable=False)
     
     def __repr__(self):
-        return f'Filme (titulo={self.titulo}, ano={self.ano})' 
+        return f'Filme (titulo={self.titulo}, ano={self.ano})'

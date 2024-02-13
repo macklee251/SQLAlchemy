@@ -1,8 +1,12 @@
+from infra.repository.atores_repository import AtoresRepository
 from infra.repository.filmes_repository import FilmesRepository
+ 
+repo_a = AtoresRepository() 
+repo_f = FilmesRepository()
 
-repo = FilmesRepository() 
 
-data = repo.select()
+response_a = repo_a.select()
+response_f = repo_f.select()
 
-print(data)
+print(response_a)
 
